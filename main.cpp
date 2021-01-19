@@ -22,7 +22,11 @@ int main() {
 		for(int i = 0; i < numlines; i++)
 		{
 			fout << buffer << std::endl;
-			std::cin.getline(buffer,buffsize);
+			//std::cin.getline(buffer,buffsize);
+			if(!std::cin.getline(buffer,buffsize))
+			{
+				break;
+			}
 		}
 		fout.close();
 		filenum++;
