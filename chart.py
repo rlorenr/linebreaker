@@ -5,12 +5,14 @@ import matplotlib.pyplot as plt
 def graph_to_png(x,y,y_min,y_max,y_label,y_color,title,prefix):
 	plt.clf()
 	plt.cla()
+	plt.figure(figsize=(6,3))
 	plt.plot(x,y,color=y_color)
 	plt.axis([min(x),max(x),y_min,y_max])
 	plt.xlabel('Time in Seconds')
 	plt.ylabel(y_label)
 	plt.title(title)
 	plt.savefig('{}{}.png'.format(prefix,int(min(x))))
+	plt.close()
 
 data = []
 
