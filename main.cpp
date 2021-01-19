@@ -4,7 +4,7 @@
 
 int main() {
 	int buffsize = 100;
-	int numlines = 21600;
+	int numlines = 43200;
 	int filenum = 0;
 	std::string prefix = "data_part_";
 	std::string suffix = ".csv";
